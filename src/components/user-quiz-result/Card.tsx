@@ -5,11 +5,32 @@ import Stack from '@mui/material/Stack';
 import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 
-export default function Card() {
-  const [isLoading,setLoading ] = React.useState(true);
-  setTimeout(() => {
-    setLoading(false);
-  }, 2000);
+type UserQuizResult = {
+  id: number;
+  name: string;
+  rank: number;
+  score: number;
+  completed: number;
+  avatar: string;
+};
+
+type CardProps = {
+  user: UserQuizResult;
+};
+
+
+export default function Card({ user }: CardProps) {
+  const [isLoading, setLoading] = React.useState(true);
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <CardComponent variant="outlined" sx={{ minWidth: 320, borderRadius: 5 }}>
       {isLoading ? (
@@ -29,12 +50,12 @@ export default function Card() {
         <CardContent>
           <Stack direction="row" spacing={2} alignItems={"center"} justifyContent={"space-between"}>
             <Stack direction="row" spacing={2} alignItems="center">
-              <span>1</span>
-              <Avatar alt="Remy Sharp" src="src/assets/img/1.jpg" />
-              <span>Owner Name</span>
+              <span>{user.rank}</span>
+              <Avatar alt="Remy Sharp" src={user.avatar} />
+              <span>{user.name}</span>
             </Stack>
             <div>
-              <span>2/10</span>
+              <span>{user.score}/{user.completed}</span>
             </div>
           </Stack>
         </CardContent>
