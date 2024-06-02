@@ -9,12 +9,12 @@ export default function WeeklyMonthlyButtonGroup() {
   };
 
   return (
-    <ButtonGroup fullWidth sx={{ mb: 6 }}>
+    <ButtonGroup sx={{ mb: 6 ,}}>
       <Button
         variant={selectedOption === 'weekly' ? 'contained' : 'outlined'}
         color="primary"
         onClick={() => handleOptionChange('weekly')}
-        sx={{ '&:focus': { outline: 'none' } }}
+        sx={{ '&:focus': { outline: 'none' },color: 'white',px: 6 }}
       >
         Weekly
       </Button>
@@ -22,7 +22,7 @@ export default function WeeklyMonthlyButtonGroup() {
         variant={selectedOption === 'monthly' ? 'contained' : 'outlined'}
         color="primary"
         onClick={() => handleOptionChange('monthly')}
-        sx={{ '&:focus': { outline: 'none' } }}
+        sx={{ '&:focus': { outline: 'none' },color: 'white',px: 6 }}
       >
         Monthly
       </Button>
