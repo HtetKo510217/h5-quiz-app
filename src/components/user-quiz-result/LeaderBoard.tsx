@@ -5,15 +5,7 @@ import morkData from "../../morkData.json";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Grid from '@mui/material/Grid';
-
-type UserQuizResult = {
-    id: number;
-    name: string;
-    rank: number;
-    score: number;
-    completed: number;
-    avatar: string;
-};
+import { UserQuizResult } from '../../types/UserQuizResult';
 
 export default function LeaderBoard() {
     const [usersQuizResult, setUsersQuizResult] = React.useState<UserQuizResult[]>([]);

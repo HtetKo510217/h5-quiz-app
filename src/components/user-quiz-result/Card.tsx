@@ -4,15 +4,7 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
-
-type UserQuizResult = {
-  id: number;
-  name: string;
-  rank: number;
-  score: number;
-  completed: number;
-  avatar: string;
-};
+import { UserQuizResult } from '../../types/UserQuizResult';
 
 type CardProps = {
   user: UserQuizResult;
