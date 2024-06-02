@@ -1,11 +1,11 @@
 import './App.css'
-import Card from './components/user-quiz-result/Card'
+import LeaderBoard from './components/user-quiz-result/LeaderBoard'
 function App() {
 
   return (
     <>
       <h1>Quiz</h1>
-      <Card />
+      <LeaderBoard />
     </>
   )
 }
