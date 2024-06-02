@@ -6,7 +6,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Grid from '@mui/material/Grid';
 import { UserQuizResult } from '../../types/UserQuizResult';
-
+import WeeklyMonthlySwitch from './WeeklyMonthlySwitch';
 export default function LeaderBoard() {
     const [usersQuizResult, setUsersQuizResult] = React.useState<UserQuizResult[]>([]);
 
@@ -28,6 +28,7 @@ export default function LeaderBoard() {
     return (
         <div>
             <h1>Winner Users</h1>
+            <WeeklyMonthlySwitch />
             <Grid container direction="column" alignItems="center">
                 <Grid item>
                     <WinnerUser user={firstThreeUsers[0]} />
