@@ -5,7 +5,7 @@ import morkData from "../../morkData.json";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Grid from '@mui/material/Grid';
-import { UserQuizResult } from '../../types/UserQuizResult';
+import { UserQuizResult } from '../../types/Quiz';
 import WeeklyMonthlySwitch from './WeeklyMonthlySwitch';
 import NavBar from './NavBar';
 export default function LeaderBoard() {
